@@ -1,0 +1,484 @@
+@import "https://fonts.googleapis.com/css2?family=Lato:wght@400;600;900&family=Libre+Caslon+Text&display=swap";
+:root {
+  --navbar-height: 100px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height);
+}
+
+body {
+  height: 3000px;
+  color: #03224e;
+  background: #fefefe;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-family: Libre Caslon Text, serif;
+}
+
+.site-container {
+  max-width: 1920px;
+  margin: auto;
+  position: relative;
+}
+
+.navbar {
+  height: var(--navbar-height);
+  box-sizing: border-box;
+  z-index: 1;
+  background: #fefefe;
+  place-content: center space-between;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: clamp(0px, 100vw, 1920px) !important;
+}
+
+.navbar-list {
+  margin-right: 20px;
+}
+
+.navbar-list a {
+  color: #2a282b;
+  font-family: Lato, sans-serif;
+  font-size: 1.1em;
+  line-height: var(--navbar-height);
+  padding: 0 20px;
+  text-decoration: none;
+}
+
+.navbar-active {
+  text-decoration: underline;
+}
+
+.logo {
+  margin: 20px 10px;
+}
+
+.menu-container {
+  position: relative;
+}
+
+.hamburger {
+  cursor: pointer;
+  margin: 37px 25px;
+  display: none;
+}
+
+.hamburger div {
+  width: 35px;
+  height: 0;
+  border: 3px solid #000;
+  margin: 2px;
+}
+
+#hamburger-list {
+  right: 0;
+  top: var(--navbar-height);
+  background: #fefefecc;
+  padding: 10px 0;
+  display: none;
+  position: absolute;
+}
+
+#hamburger-list a {
+  color: #2a282b;
+  text-align: right;
+  padding: 10px 70px 10px 20px;
+  font-family: Lato, sans-serif;
+  font-size: 1.1em;
+  line-height: 2.5em;
+  text-decoration: none;
+  display: block;
+}
+
+@media (max-width: 970px) {
+  .navbar-list {
+    display: none;
+  }
+
+  .hamburger {
+    margin-right: 40px;
+    display: inline-block;
+  }
+}
+
+.about-us {
+  margin-top: var(--navbar-height);
+  text-align: center;
+  max-height: 1000px;
+  width: min(100vw, 1920px);
+  max-width: 100%;
+  box-sizing: border-box;
+  background-image: url("hero-image.f32f1aaf.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.orange-header {
+  color: #bf6050;
+  text-transform: uppercase;
+  font-size: .9em;
+}
+
+#address {
+  font-family: Lato, sans-serif;
+  margin-top: 0 !important;
+  margin-bottom: 5px !important;
+}
+
+.section h1 {
+  font-size: 2.3em;
+}
+
+.divider {
+  height: 2px;
+  background-color: #bf6050;
+  margin: auto;
+}
+
+.divider-large {
+  max-width: 750px;
+}
+
+.divider-small {
+  max-width: 200px;
+}
+
+.section h1, .orange-header {
+  letter-spacing: 2px;
+  font-family: Lato, sans-serif;
+  font-weight: 900;
+}
+
+.section p {
+  max-width: 80vw;
+  text-align: center;
+  margin: 50px auto;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  display: block;
+}
+
+#hero-caption {
+  max-width: 600px;
+  margin-top: 30px;
+}
+
+.button {
+  letter-spacing: 2px;
+  color: #fff;
+  width: 200px;
+  height: 50px;
+  background-color: #da6f5c;
+  border: 0;
+  border-radius: 7px;
+  margin: auto;
+  font-family: Lato, sans-serif;
+  font-size: 1.2em;
+  font-weight: 900;
+  line-height: 50px;
+  text-decoration: none;
+  display: block;
+}
+
+.button-contact {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.section {
+  text-align: center;
+  padding: 60px 35px;
+}
+
+.light {
+  background: #f1f1f1;
+}
+
+.dark {
+  color: #fefefe;
+  background: #292728;
+}
+
+.image-section {
+  flex-direction: row;
+  display: flex;
+}
+
+.image-section.odd {
+  flex-direction: row;
+}
+
+.image-section.even {
+  flex-direction: row-reverse;
+}
+
+.image-section > * {
+  width: 50vw;
+  height: 50vw;
+  max-width: 1100px;
+  max-height: 1100px;
+}
+
+.image-1 {
+  background: url("foto1.84db196d.jpg") center / cover no-repeat;
+}
+
+.image-2 {
+  background: url("foto2.eb2033d0.jpg") center / cover no-repeat;
+}
+
+.image-3 {
+  background: url("foto3.a7fa50f4.jpg") center / cover no-repeat;
+}
+
+.image-4 {
+  background: url("foto4.187da5f5.jpg") center / cover no-repeat;
+}
+
+.image-5 {
+  background: url("foto5.6b2a9205.jpg") center / cover no-repeat;
+}
+
+.description {
+  text-align: center;
+  position: relative;
+}
+
+.description-container {
+  padding: 0 35px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%)translateX(-50%);
+}
+
+.description h3 {
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  font-family: Lato, sans-serif;
+  font-size: 2em;
+  font-weight: 900;
+}
+
+.description .divider {
+  margin-bottom: 15px;
+}
+
+.description p {
+  width: 25vw;
+  max-width: 850px;
+  margin: auto;
+  font-size: 1.5em;
+}
+
+.icons {
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+}
+
+.icon-item {
+  color: inherit;
+  letter-spacing: 2px;
+  width: 30vw;
+  margin: 30px;
+  font-family: Lato, sans-serif;
+  font-size: 1.3em;
+  text-decoration: none;
+  display: block;
+}
+
+.icon {
+  width: 80px;
+  margin: 30px auto;
+  display: block;
+}
+
+.icon-item span {
+  font-size: .8em;
+  display: block;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+form {
+  flex-direction: row;
+  place-content: space-between center;
+  align-items: center;
+  font-family: Lato, sans-serif;
+  display: flex;
+}
+
+form section {
+  width: 400px;
+  flex-direction: column;
+  padding: 20px 0;
+  display: flex;
+}
+
+.left {
+  align-items: flex-start;
+}
+
+.right {
+  align-items: flex-end;
+  margin-top: 20px;
+}
+
+form section label {
+  width: 80%;
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+.required, .right label {
+  width: 80%;
+  text-align: left;
+}
+
+form section input {
+  width: 80%;
+  box-sizing: border-box;
+  height: 35px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 20px;
+  padding: 5px;
+  font-size: 1.1em;
+}
+
+.required {
+  padding-top: 80px;
+  font-size: .8em;
+}
+
+.require-left {
+  display: block;
+}
+
+.require-right {
+  display: none;
+}
+
+textarea[name="body"] {
+  width: 80%;
+  resize: none;
+  box-sizing: border-box;
+  height: 210px;
+  color: #7b7b7d;
+  padding: 10px;
+  font-family: Libre Caslon Text, serif;
+}
+
+.button-form {
+  color: #fff;
+  height: 60px;
+  background-color: #da6f5c;
+  border-radius: 3px;
+  margin-top: 60px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.grey {
+  color: #b6b6b6;
+  background: #545253;
+  font-family: Lato, sans-serif;
+}
+
+@media (min-width: 1050px) {
+  .grey span {
+    width: 80%;
+    text-align: left;
+    display: block;
+  }
+}
+
+@media (max-width: 1250px) {
+  .section p, .description p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 1050px) {
+  .image-section.odd, .image-section.even {
+    flex-direction: column;
+  }
+
+  .image-section > * {
+    width: 100vw;
+    height: 100vw;
+    max-width: 100%;
+  }
+
+  .description p {
+    width: 80vw;
+    margin: auto;
+  }
+
+  .icons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon-item {
+    width: 90vw;
+  }
+
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form section {
+    width: 80vw;
+  }
+
+  .left, .right {
+    align-items: center;
+  }
+
+  .right {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .left {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .required {
+    padding-top: 20px;
+  }
+
+  .require-left {
+    display: none;
+  }
+
+  .require-right {
+    display: block;
+  }
+
+  .button-form {
+    margin-top: 45px;
+  }
+}
+
+@media (max-width: 800px) {
+  .required, .left label, .right label, textarea[name="body"], form section input {
+    width: 80vw;
+  }
+}
+
+/*# sourceMappingURL=index.4d663569.css.map */
